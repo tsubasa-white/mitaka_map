@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <style>
+    #map {
+        height: 100%;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    </style>
+    <div id="map" style="width:800px; height:600px"></div>
+      <script src="mitaka.js"> </script>
+      <script src="mitaka_hanzai.js"> </script>
+    <form>
+    <p>
+    <input type="button" value="全ての犯罪" onclick="initMap(1);" />
+    <input type="button" value="粗暴犯" onclick="initMap(2);" />
+    <input type="button" value="侵入窃盗犯" onclick="initMap(3);" />
+    <input type="button" value="元に戻す" onclick="initMap(0);" />
+    </p>
+    </form>
+    
+<script async defer src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyAiV2ZbFIYuD3N4hzGLstSn2e4ZG5A7QlU&callback=initMap&libraries=places" type="text/javascript"></script>
+</body>
